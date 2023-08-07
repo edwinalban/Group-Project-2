@@ -1,0 +1,3 @@
+-- Drop and create database
+DROP DATABASE IF EXISTS -- DB NAME HERE
+CREATE DATABASE -- DB NAME HERE
