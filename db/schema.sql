@@ -1,3 +1,3 @@
 -- Drop and create database
-DROP DATABASE IF EXISTS -- DB NAME HERE
-CREATE DATABASE -- DB NAME HERE
+DROP DATABASE IF EXISTS social_whiskers_db;
+CREATE DATABASE social_whiskers_db;
