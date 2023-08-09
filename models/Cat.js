@@ -8,7 +8,7 @@ Cat.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    special_needs: {
+    specialNeeds: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -20,7 +20,12 @@ Cat.init({
         type: DataTypes.STRING, 
         allowNull: false,
     },
-    fav_users:{
+    favUsers:{
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        allowNull: false,
+    },
+    voteCount: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
         allowNull: false,
@@ -29,6 +34,8 @@ Cat.init({
     sequelize,
     modelName: 'Cat',
     timestamps: false,
+    freezeTableName: true,
+    underscored: true
 });
 
 module.exports = Cat;

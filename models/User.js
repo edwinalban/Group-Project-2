@@ -35,10 +35,22 @@ User.init({
     defaultValue: false,
     allowNull: false,
   },
+  catVote: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+  },
+  dogVote: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+  }
 }, {
   sequelize,
   modelName: 'User',
   timestamps: true,
+  freezeTableName: true,
+  underscored: true
 });
 
 // Hook to hash password before saving
