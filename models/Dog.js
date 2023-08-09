@@ -4,6 +4,10 @@ const sequelize = require('../config/connection');
 class Dog extends Model {};
 
 Dog.init({
+    sex: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     breed: {
         type: DataTypes.STRING,
         allowNull: false,
