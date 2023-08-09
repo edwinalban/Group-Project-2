@@ -1,9 +1,9 @@
 [
     {
         "breed": "long-haired tabby",
-        "special_needs": "Will only drink sparkling water. Allergic to kids.",
+        "specialNeeds": "Will only drink sparkling water. Allergic to kids.",
         "age": "2",
         "location": "Portland,OR",
-        "fav_users": ""
+        "favUsers": ""
     }
 ]
