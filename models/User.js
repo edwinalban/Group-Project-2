@@ -23,11 +23,7 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-      isLongEnough(value) {
-        if (value.length < 8) {
-          throw new Error('Password must be at least 8 characters long');
-        }
-      },
+      len:[8],
     },
   },
   isLoggedIn: {
