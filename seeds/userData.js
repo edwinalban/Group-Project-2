@@ -1,13 +1,12 @@
 const { User } = require('../models');
 
-const userData = 
-[
+const userData = [
     {
-        "username": "testuser",
-        "password": "password",
-        "isLoggedIn:": "false",
-        "catVote": "false",
-        "dogVote": "false"
+        username: "testuser",
+        password: "password1",
+        isLoggedIn: false,
+        catVote: false,
+        dogVote: false
     }
 ]
 

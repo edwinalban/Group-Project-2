@@ -32,16 +32,16 @@ Cat.init({
     favUsers:{
         type: DataTypes.INTEGER,
         defaultValue: 0,
-        allowNull: false,
+        allowNull: true,
     },
     voteCount: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
-        allowNull: false,
+        allowNull: true,
     },
 }, {
     sequelize,
-    modelName: 'Cat',
+    modelName: 'cat',
     timestamps: false,
     freezeTableName: true,
     underscored: true
