@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
-const { User, Animals, Cat, Dog } = require('../models');
 
 const seedUsers = require('./userData');
+console.log(seedUsers);
 const seedAnimals = require('./animalsData');
 const seedCats = require('./catData');
 const seedDogs = require('./dogData');

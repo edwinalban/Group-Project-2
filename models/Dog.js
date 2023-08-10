@@ -32,16 +32,16 @@ Dog.init({
     favUsers:{
         type: DataTypes.INTEGER,
         defaultValue: 0,
-        allowNull: false,
+        allowNull: true,
     },
     voteCount: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
-        allowNull: false,
+        allowNull: true,
     },
 }, {
     sequelize,
-    modelName: 'Dog',
+    modelName: 'dog',
     timestamps: false,
     freezeTableName: true,
     underscored: true

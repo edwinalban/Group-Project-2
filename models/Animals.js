@@ -19,7 +19,7 @@ Animals.init ({
     },
 }, {
     sequelize,
-    modelName: Animals,
+    modelName: "animals",
     timestamps: false
 
 });
