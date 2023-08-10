@@ -4,6 +4,11 @@ const sequelize = require('../config/connection');
 class Cat extends Model {};
 
 Cat.init({
+    id:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement:true,
+    },
     sex: {
         type: DataTypes.STRING,
         allowNull: false,
