@@ -1,3 +1,7 @@
+const { Dog } = require('../models');
+
+const dogData = 
+
 [
     {
         "sex": "Male",
@@ -32,3 +36,7 @@
         "favUsers": ""
     }
 ]
+
+const seedDogs = () => Dog.bulkCreate(dogData);
+
+module.exports = seedDogs;
