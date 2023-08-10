@@ -4,6 +4,11 @@ const sequelize = require('../config/connection');
 class Dog extends Model {};
 
 Dog.init({
+    id:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement:true,
+    },
     sex: {
         type: DataTypes.STRING,
         allowNull: false,
