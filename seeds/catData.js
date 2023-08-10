@@ -1,3 +1,7 @@
+const { Cat } = require('../models');
+
+const catData =
+
 [
     {
         "sex": "Female",
@@ -40,4 +44,8 @@
         "favUsers": ""
     }
     
-]
+];
+
+const seedCats = () => Cat.bulkCreate(catData);
+
+module.exports = seedCats;
