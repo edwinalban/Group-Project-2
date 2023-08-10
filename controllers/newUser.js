@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const { hashPassword } = require('../helpers');
+const { hashPassword } = require('../utils/helpers');
 
 class newUser {
   static async signup(req, res) {

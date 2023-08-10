@@ -2,7 +2,7 @@ const router = require('express').Router();
 const newUser = require('../controllers/newUser'); // Import newUser controller
 
 // Render the sign-up page
-router.get('/signup', async (req, res) => {
+router.get('/', async (req, res) => {
   res.render('signup');
 });
 
