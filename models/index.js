@@ -4,8 +4,8 @@ const Dog = require('./Dog');
 const User = require('./User')
 
 // Set up relationships between models
-Cat.belongsTo(Animals);
-Dog.belongsTo(Animals);
+Cat.belongsTo(Animals, {foreignKey: 'animalId'});
+Dog.belongsTo(Animals, {foreignKey: 'animalId'});
 
 module.exports = {
   Animals,

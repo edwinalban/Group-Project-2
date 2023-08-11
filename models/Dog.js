@@ -9,6 +9,13 @@ Dog.init({
         primaryKey: true,
         autoIncrement:true,
     },
+    animalId:{
+        type: DataTypes.INTEGER,
+        references:{
+            model: 'animals',
+            key: 'id',
+        }
+    },
     sex: {
         type: DataTypes.STRING,
         allowNull: false,
