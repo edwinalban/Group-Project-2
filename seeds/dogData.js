@@ -2,6 +2,7 @@ const { Dog } = require('../models');
 
 const dogData = [
     {
+        animalId: 6,
         sex: "Male",
         breed: "Chihuahua",
         specialNeeds: "Really loves Halloween",
@@ -9,6 +10,7 @@ const dogData = [
         location: "Estacada,OR",
     },
     {
+        animalId: 7,
         sex: "Female",
         breed: "German Shepard",
         specialNeeds: "Bad hip",
@@ -16,6 +18,7 @@ const dogData = [
         location: "Hillsboro,OR",
     },
     {
+        animalId: 8,
         sex: "Female",
         breed: "German Shepard/Pitt",
         specialNeeds: "N/A",
@@ -23,6 +26,7 @@ const dogData = [
         location: "Ashland,OR",
     },
     {
+        animalId: 9,
         sex: "Male",
         breed: "Husky",
         specialNeeds: "Special Diet",
