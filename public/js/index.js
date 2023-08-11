@@ -51,7 +51,7 @@ loginForm.addEventListener('submit', async (e) => {
   
       if (response.ok) {
         // Successful login, redirect to homepage or desired route
-        window.location.href = '/homepage';
+        window.location.href = '/';
       } else {
         // Handle login error
         const errorMessage = await response.text();
