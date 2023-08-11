@@ -7,20 +7,22 @@ router.get('/', async (req, res) => {
     const dbAnimalsData = await Animals.findAll({
       include: [
         {
-          model: Animals,
-          attributes: [
-            'name',
-            'age',
-          ],
+          model: Cat,
+          attributes: ['age'],
+        },
+        {
+          model: Dog,
+          attributes: ['age'],
         },
       ],
     });
+    console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) => 
     animals.get({ plain: true })
     );
     res.render('allAnimals', {
       animals,
-      loggedIn: req.session.loggedIn,
+      // loggedIn: req.session.loggedIn,
     });
   } catch(err){
     console.log(err);
@@ -31,7 +33,7 @@ router.get('/', async (req, res) => {
 //get all animals
 
 //get one animal
-router.get('/allAnimals/:id', async (req, res) => {
+router.get('/allanimals/:id', async (req, res) => {
   try {
     const dbAnimalsData = await Animals.findByPk(req.params.id, {
       include: [
@@ -53,7 +55,8 @@ router.get('/allAnimals/:id', async (req, res) => {
     });
 
     const animals = dbAnimalsData.get({ plain: true });
-    res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
+    // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
+    res.render('allAnimals');
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
