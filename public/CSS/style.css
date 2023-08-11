@@ -1,23 +1,28 @@
 body {
+    justify-content: center;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 2;
     background-color: #ffffff;
-    
+
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #3498db; /* Blue color */
+h1,
+h2,
+h3 {
+    color: #3498db;
+    /* Blue color */
 }
 
 p {
-    color: #27ae60; /* Green color */
+    color: #27ae60;
+    /* Green color */
 }
 
 button {
@@ -34,7 +39,7 @@ button {
     margin: 5px;
 }
 
-/* Additional styles for links */
+/* ADDITIONAL  */
 a {
     color: #3498db;
     text-decoration: none;
@@ -43,5 +48,33 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* FEATURED PET CARD */
+.featured-pet-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px;
+    margin-top: 20px;
+
+}
+
+.featured-pet-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.featured-pet-card h2 {
+    color: #27ae60; /* Green color */
+    font-size: 24;
+}
+.featured-pet-card h3 {
+    color: #3498db; /* Blue color */
+    font-size: 20px;
+}
+
+
 
 /* CSS - NS */

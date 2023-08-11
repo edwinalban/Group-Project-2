@@ -2,20 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Whiskers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Whiskers</title>
 
-  <body> <style> ul.navbar {
+<body>
+    <style>
+        ul.navbar {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 1;
+            padding: 2;
             overflow: hidden;
             background-color: #8a5b04;
         }
 
         li.navitem {
-            float: left;
+            float: right;
         }
 
         li.navitem a {
@@ -28,35 +30,37 @@
 
         li.navitem a:hover {
             background-color: #555;
-        }</style> 
-    <ul class = "navbar"> 
-      <li class="navitem"><a href="/"> Home </a></li> 
-      <li class="navitem"><a href='/animals.js'> View Pets </a></li> 
-      <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li> 
-      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> 
-      {{!-- Navbar - NS --}}
-  </body>
+        }
+    </style>
+    <ul class="navbar">
+        <li class="navitem"><a href="/"> Home </a></li>
+        <li class="navitem"><a href='/animals.js'> View Pets </a></li>
+        <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li>
+        <li class="navitem"><a href='/seeFavs'> View Favorites </a></li>
+        {{!-- Navbar - NS --}}
+</body>
 </head>
-    <div class = "featured-pet-card">
-        <img src="path_to_fatured_pet_image.jpg" alt = "Featured Pet"> 
-        <h2>FEATURED PET!</h2>
-        <h3> MEET [Pet Name]</h3>
-        <p>[pet description]</p>
-        <button> ADOPT NOW </button>
-    </div>
-<body>
-  <header class="">
-    <h1>
-      Social Whiskers
-    </h1>
+<div class="featured-pet-card">
+    <img src="path_to_fatured_pet_image.jpg" alt="Featured Pet">
+    <h2>FEATURED PET!</h2>
+    <h3> MEET [Pet Name]</h3>
+    <p>[pet description]</p>
+    <button> ADOPT NOW </button>
+</div>
 
-  </header> 
-  <main class="">
-    {{{body}}}
-  </main>
-  <footer>
-      
-  </footer>
+<body>
+    <header class="">
+        <h1>
+            Social Whiskers
+        </h1>
+
+    </header>
+    <main class="">
+        {{{body}}}
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
