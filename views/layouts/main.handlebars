@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #04f704;
+            background-color: #8a5b04;
         }
 
         li.navitem {
@@ -31,41 +31,28 @@
         }</style> 
     <ul class = "navbar"> 
       <li class="navitem"><a href="/"> Home </a></li> 
-      <li class="navitem"><a href='/cat.js'> View Cats </a></li> 
-      <li class="navitem"><a href='/dog.js'> View Dogs </a></li> 
-      <li class="navitem"><a href='/vote'> Vote for Pet of the Month </a></li> 
-      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> 
+      <li class="navitem"><a href='/animals.js'> View Pets </a></li> 
+      <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li> 
       <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> 
       {{!-- Navbar - NS --}}
   </body>
 </head>
-
+    <div class = "featured-pet-card">
+        <img src="path_to_fatured_pet_image.jpg" alt = "Featured Pet"> 
+        <h2>FEATURED PET!</h2>
+        <h3> MEET [Pet Name]</h3>
+        <p>[pet description]</p>
+        <button> ADOPT NOW </button>
+    </div>
 <body>
   <header class="">
     <h1>
       Social Whiskers
     </h1>
+
   </header> 
   <main class="">
     {{{body}}}
-  </main>
-<head>
-</head>
-<body>
-    <div class="container">
-        <img src="" alt="">
-        <div>
-            <class ="form group">
-            <button id="login-submit" a href="./login.handlebars"> Log In</button>
-            <button id="signout-submit" > Log Out</button>
-            <p>Don't have a login?</p>
-            <button id="signup-submit" a href ="./signup.handlebars"> Sign Up With Social Whiskers!</button>
-            </class>
-        </div>
-    </div>
-</body>
-</html>
-
   </main>
   <footer>
       
