@@ -17,6 +17,10 @@ Animals.init ({
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    filename: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    }
 }, {
     sequelize,
     modelName: "animals",
