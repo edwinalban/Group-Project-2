@@ -46,6 +46,14 @@ Cat.init({
         defaultValue: 0,
         allowNull: true,
     },
+    filename:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    description:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
 }, {
     sequelize,
     modelName: 'cat',

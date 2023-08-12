@@ -8,6 +8,8 @@ const dogData = [
         specialNeeds: "Really loves Halloween",
         age: 2,
         location: "Estacada,OR",
+        filename: "dog1.jpg",
+        description: "dog in witch costume",
     },
     {
         animalId: 7,
@@ -16,6 +18,8 @@ const dogData = [
         specialNeeds: "Bad hip",
         age: 8,
         location: "Hillsboro,OR",
+        filename: "dog2.jpg",
+        description: "dog laying down",
     },
     {
         animalId: 8,
@@ -24,6 +28,8 @@ const dogData = [
         specialNeeds: "N/A",
         age: 8,
         location: "Ashland,OR",
+        filename: "dog3.jpg",
+        description: "dog snuggling",
     },
     {
         animalId: 9,
@@ -32,6 +38,8 @@ const dogData = [
         specialNeeds: "Special Diet",
         age: 6,
         location: "Beaverton,OR",
+        filename: "dog4.jpg",
+        description: "dog headshot",
     }
 ]
 

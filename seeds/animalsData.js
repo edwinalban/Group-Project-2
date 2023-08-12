@@ -2,40 +2,40 @@ const { Animals } = require('../models');
 
 const animalsData = [
     {
-        name: "Fluffy",
+        name: "Willow",
         age: 2
     },
     {
-        name: "Fluffy2",
+        name: "Whomping",
+        age: 1
+    },
+    {
+        name: "Wedge",
+        age: 6
+    },
+    {
+        name: "Walter",
+        age: 6
+    },
+    {
+        name: "Winston",
+        age: 7
+    },
+    {
+        name: "Sir Podrick",
         age: 2
     },
     {
-        name: "Fluff3y",
-        age: 2
+        name: "Sisu",
+        age: 8
     },
     {
-        name: "Fluffy4",
-        age: 2
+        name: "Sky",
+        age: 8
     },
     {
-        name: "Fluffy5",
-        age: 2
-    },
-    {
-        name: "Fluffy9",
-        age: 2
-    },
-    {
-        name: "Fluffy6",
-        age: 2
-    },
-    {
-        name: "Fluffy7",
-        age: 2
-    },
-    {
-        name: "Fluffy8",
-        age: 2
+        name: "Anya",
+        age: 6
     }
 ];
 
