@@ -5,70 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Whiskers</title>
-
-  <body> <style> ul.navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #04f704;
-        }
-
-        li.navitem {
-            float: left;
-        }
-
-        li.navitem a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li.navitem a:hover {
-            background-color: #555;
-        }</style> 
-    <ul class = "navbar"> 
-      <li class="navitem"><a href="/"> Home </a></li> 
-      <li class="navitem"><a href='/cat.js'> View Cats </a></li> 
-      <li class="navitem"><a href='/dog.js'> View Dogs </a></li> 
-      <li class="navitem"><a href='/vote'> Vote for Pet of the Month </a></li> 
-      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> 
-      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> 
-      {{!-- Navbar - NS --}}
-  </body>
+  <link rel="stylesheet" type="text/css" href="/CSS/main.css">
 </head>
 
 <body>
   <header class="">
+    <ul class="navbar">
+      <li class="navitem"><a href="/"> Home </a></li>
+      <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li>
+      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li>
+    </ul>
+    {{!-- Navbar - NS --}}
     <h1>
       Social Whiskers
     </h1>
-  </header> 
-  <main class="">
+  </header>
+  <main>
     {{{body}}}
   </main>
-<head>
-</head>
-<body>
-    <div class="container">
-        <img src="" alt="">
-        <div>
-            <class ="form group">
-            <button><a href="./login">Log In</a></button>
-            <button>Log Out</button>
-            <p>Don't have a login?</p>
-            <button><a href ="./signup">Sign Up With Social Whiskers!</a></button>
-            </class>
-        </div>
-    </div>
-</body>
-</html>
-
-  </main>
   <footer>
-      
+
   </footer>
 </body>
 
