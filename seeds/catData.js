@@ -8,6 +8,8 @@ const catData = [
         specialNeeds: "Will only drink sparkling water. Allergic to kids.",
         age: 2,
         location: "Portland,OR",
+        filename: "cat1.jpg",
+        description: "cat standing in grass",
         },
     {
         animalId: 2,
@@ -16,6 +18,8 @@ const catData = [
         specialNeeds: "N/A",
         age: 1,
         location: "Astoria, OR",
+        filename: "cat2.jpg",
+        description: "cat sleeping on mug",
         },
     {
         animalId: 3,
@@ -24,6 +28,8 @@ const catData = [
         specialNeeds: "Thinks he is a bat.",
         age: 6,
         location: "Cottage Grove, OR",
+        filename: "cat3.jpg",
+        description: "cat with bat wings on",
 
     },
     {
@@ -33,6 +39,8 @@ const catData = [
         specialNeeds: "Special Diet",
         age: 6,
         location: "Roseburg, OR",
+        filename: "cat4.jpg",
+        description: "cat hiding in bag",
         },
     {
         animalId: 5,
@@ -41,6 +49,8 @@ const catData = [
         specialNeeds: "N/A",
         age: 7,
         location: "ForestGrove, OR",
+        filename: "cat5.jpg",
+        description: "cat headshot",
         }
     
 ];
