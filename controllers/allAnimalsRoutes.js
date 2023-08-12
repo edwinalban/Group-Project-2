@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Animals, Cat, Dog } = require('../models');
 
+
+//get allanimals works
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
@@ -30,33 +32,32 @@ router.get('/', async (req, res) => {
   }
 });
 
-//get all animals
 
-//get one animal
-router.get('/allanimals/:id', async (req, res) => {
+
+//get one cat - right now i'm getting the cat handlebars, but not populated data
+router.get('/cat/:id', async (req, res) => {
   try {
-    const dbAnimalsData = await Animals.findByPk(req.params.id, {
-      include: [
-        {
-          model: {Animals, Cat, Dog}, //trying out from multiple models
-          attributes: [
-            'id',
-            'name',
-            'age',
-            'sex',
-            'breed',
-            'specialNeeds',
-            'location',
-            'favUsers',
-            'voteCount',
-          ],
-        },
-      ],
+    const dbCatData = await Cat.findByPk(req.params.id, {
     });
 
-    const animals = dbAnimalsData.get({ plain: true });
+    const cat = dbCatData.get({ plain: true });
     // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
-    res.render('allAnimals');
+    res.render('cats', {cat});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//get one dog - same status as cat right now. 
+router.get('/dog/:id', async (req, res) => {
+  try {
+    const dbDogData = await Dog.findByPk(req.params.id, {
+    });
+
+    const dog = dbDogData.get({ plain: true });
+    // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
+    res.render('dogs', {dog});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
