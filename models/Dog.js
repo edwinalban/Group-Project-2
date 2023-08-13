@@ -9,6 +9,10 @@ Dog.init({
         primaryKey: true,
         autoIncrement:true,
     },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     animalId:{
         type: DataTypes.INTEGER,
         references:{
@@ -52,6 +56,10 @@ Dog.init({
     },
     description:{
         type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    petOfTheMonth: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
     },
 }, {

@@ -4,18 +4,9 @@
 </head>
 
 <div class="img-wrapper">
-    <div>
-        <div>
-            <img src="/assets/images/cat1.jpg" alt="photo of featured pet" style="width: 30vw; height: auto">
-        </div>
-        <button style="border: 5px inset black; width: 30vw; margin: 0">Vote for this Cat!</button>
-    </div>
-    <div>
-        <div>
-            <img src="../assets/images/dog1.jpg" alt="photo of featured pet" style="width: 30vw; height: auto">
-        </div>
-        <button style="border: 5px inset black; width: 30vw; margin: 0">Vote for this Dog!</button>
-    </div>
+    {{#each animals as |animal|}}
+    {{> voting-details}}
+    {{/each}}
 </div>
 <p>View all adoptable pets</p>
 <button class="search-button">Search</button>

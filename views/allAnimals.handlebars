@@ -4,7 +4,7 @@
   <h1 class="animal-gallery">Adoptable Animals</h1>
   <!-- If the user is logged in, render all animal content -->
   {{!-- {{#if loggedIn}} --}}
-  <section class="flex-row justify-center">
+  <section class="img-wrapper">
     {{#each animals as |animal|}}
     {{> animal-details}}
     {{/each}}
