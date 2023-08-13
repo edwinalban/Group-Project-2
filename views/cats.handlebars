@@ -3,7 +3,7 @@
   <!-- If the user is logged in, render all animal content -->
   {{!-- {{#if loggedIn}} --}}
   <section class="flex-row justify-center">
-    {{#each cats as |cat|}}
+    {{#each cats}}
     {{> cat-details}}
     {{/each}}
   </section>

@@ -7,7 +7,7 @@ class AuthController {
             
             const user = await User.findOne({ where: {email} });
             if (!user) {
-                return res.status(401).json({message: 'Incorect Username or Password'});
+                return res.status(401).json({message: 'Incorrect Username or Password'});
             }
 
             const validPassword = await user.validatePassword(password);
