@@ -21,3 +21,9 @@ li.navitem a {
 li.navitem a:hover {
     background-color: #555;
 }
+
+.img-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

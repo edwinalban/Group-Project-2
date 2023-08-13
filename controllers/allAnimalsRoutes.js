@@ -7,16 +7,6 @@ router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
     const dbAnimalsData = await Animals.findAll({
-      include: [
-        {
-          model: Cat,
-          attributes: ['age'],
-        },
-        {
-          model: Dog,
-          attributes: ['age'],
-        },
-      ],
     });
     console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) => 
@@ -32,7 +22,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// View one animal, no working yet
+// View one animal, not working yet
 router.get('/:id', async (req, res) => {
   try {
       const dbanimalData = await Animals.findByPk(req.params.id, {
