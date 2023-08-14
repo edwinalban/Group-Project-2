@@ -31,4 +31,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//view comments
+
+
 module.exports = router;
