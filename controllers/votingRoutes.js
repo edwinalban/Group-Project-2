@@ -1,5 +1,27 @@
 const router = require('express').Router();
-const { Animals, Cat, Dog } = require('../models');
+const { Animals, Cat, Dog, Comment } = require('../models');
+
+router.get('/', async (req,res) => {
+  try{
+    const dbCommentsData = await Comment.findAll({
+      include: [
+        {
+          model: Comment,
+          attributes: ['comment'],
+        },
+      ],
+    });
+    const comments = dbCommentsData.map((comments) =>
+    comments.get({ plain: true })
+    );
+  res.render('voting', {
+    comments,
+  
+  });
+} catch(err){
+  res.status(500).json(err);}
+
+});
 
 // View all animals
 router.get('/', async (req, res) => {

@@ -66,4 +66,5 @@ const catData = [
 
 const seedCats = () => Cat.bulkCreate(catData);
 
+
 module.exports = seedCats;
