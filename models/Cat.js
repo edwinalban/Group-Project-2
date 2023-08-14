@@ -9,6 +9,10 @@ Cat.init({
         primaryKey: true,
         autoIncrement:true,
     },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     animalId:{
         type: DataTypes.INTEGER,
         references:{
@@ -45,6 +49,18 @@ Cat.init({
         type: DataTypes.INTEGER,
         defaultValue: 0,
         allowNull: true,
+    },
+    filename:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    description:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    petOfTheMonth: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
     },
 }, {
     sequelize,

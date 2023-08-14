@@ -1,20 +1,12 @@
 const router = require('express').Router();
 const { Animals, Cat, Dog } = require('../models');
 
+
+// View all animals
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
     const dbAnimalsData = await Animals.findAll({
-      include: [
-        {
-          model: Cat,
-          attributes: ['age'],
-        },
-        {
-          model: Dog,
-          attributes: ['age'],
-        },
-      ],
     });
     console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) => 
@@ -30,36 +22,19 @@ router.get('/', async (req, res) => {
   }
 });
 
-//get all animals
-
-//get one animal
-router.get('/allanimals/:id', async (req, res) => {
+// View one animal, not working yet
+router.get('/:id', async (req, res) => {
   try {
-    const dbAnimalsData = await Animals.findByPk(req.params.id, {
-      include: [
-        {
-          model: {Animals, Cat, Dog}, //trying out from multiple models
-          attributes: [
-            'id',
-            'name',
-            'age',
-            'sex',
-            'breed',
-            'specialNeeds',
-            'location',
-            'favUsers',
-            'voteCount',
-          ],
-        },
-      ],
-    });
-
-    const animals = dbAnimalsData.get({ plain: true });
-    // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
-    res.render('allAnimals');
+      const dbanimalData = await Animals.findByPk(req.params.id, {
+      });
+      const animal = dbanimalData.get({ plain: true });
+      // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
+      res.render('allanimals', {
+          animal,
+      });
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+      console.log(err);
+      res.status(404).json(err);
   }
 });
 
