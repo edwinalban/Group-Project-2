@@ -51,4 +51,4 @@ const votingBtn = document.getElementById("voting-btn");
 // votingBtn.addEventListener("click", ) 
 
 
-//render comments
+

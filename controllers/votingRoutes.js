@@ -3,6 +3,7 @@ const { Animals, Cat, Dog, Comment } = require('../models');
 
 
 
+
 // View all animals
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
