@@ -71,4 +71,4 @@ loginForm.addEventListener('submit', async (e) => {
 // votingBtn.addEventListener("click", ) 
 
 
-//render comments
+
