@@ -5,12 +5,12 @@ const { Animals, Cat, Dog, Comment } = require('../models');
 router.get('/', async (req,res) => {
   try{
     const dbCommentsData = await Comment.findAll({
-      include: [
-        {
-          model: Comment,
-          attributes: ['comment'],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ['comment'],
+      //   },
+      // ],
     });
     const comments = dbCommentsData.map((comments) =>
     comments.get({ plain: true })
