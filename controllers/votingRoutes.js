@@ -1,28 +1,7 @@
 const router = require('express').Router();
 const { Animals, Cat, Dog, Comment } = require('../models');
 
-//view comments
-router.get('/', async (req,res) => {
-  try{
-    const dbCommentsData = await Comment.findAll({
-      // include: [
-      //   {
-      //     model: Comment,
-      //     attributes: ['comment'],
-      //   },
-      // ],
-    });
-    const comments = dbCommentsData.map((comments) =>
-    comments.get({ plain: true })
-    );
-  res.render('voting', {
-    comments,
-  
-  });
-} catch(err){
-  res.status(500).json(err);}
 
-});
 
 
 // View all animals
@@ -41,12 +20,17 @@ router.get('/', async (req, res) => {
         },
       ],
     });
+    const dbCommentsData = await Comment.findAll();
+    const comments = dbCommentsData.map((comments) =>
+    comments.get({ plain: true })
+    );
+    console.log(comments)
     console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) => 
     animals.get({ plain: true })
     );
     res.render('voting', {
-      animals,
+      animals,comments
       // loggedIn: req.session.loggedIn,
     });
   } catch(err){
