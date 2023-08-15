@@ -7,8 +7,8 @@ class newUser {
       const { username, password } = req.body;
 
       // Validate password length
-      if (password.length < 8) {
-        return res.status(400).json({ message: 'Password must be at least 8 characters long' });
+      if (!password || password.length < 8) {
+        return { success: false, message: 'Password must be at least 8 characters long' };
       }
 
       // Hash the password using the helper function
@@ -17,10 +17,10 @@ class newUser {
       // Create a new user with the hashed password
       await User.create({ username, password: hashedPassword });
 
-      res.status(201).json({ message: 'User registered successfully' });
+      return { success: true, message: 'User registered successfully' };
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'An error occurred' });
+      return { success: false, message: 'An error occurred' };
     }
   }
 

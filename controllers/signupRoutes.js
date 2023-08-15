@@ -7,12 +7,14 @@ router.get('/', async (req, res) => {
 });
 
 // Handle user sign-up
-router.post('/signup', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    await newUser.signup(req, res);
+    const result = await newUser.signup(req, res);
 
-    // Redirect to the login page after successful sign-up
-    res.redirect('/login');
+    // If the signup was successful, redirect to the login page
+    if (result.success) {
+      res.redirect('/login');
+    }
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'An error occurred' });
