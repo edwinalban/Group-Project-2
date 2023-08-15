@@ -47,7 +47,7 @@ const votingBtn = document.getElementById("voting-btn");
 
 
 //event listeners for voting buttons add to counter on click? 
-const votingBtn = document.getElementById("voting-btn");
+// const votingBtn = document.getElementById("voting-btn");
 // votingBtn.addEventListener("click", ) 
 
 

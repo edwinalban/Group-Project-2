@@ -10,13 +10,15 @@
 </div>
 <div>
     <form>Add a comment about your favorite animal!
-        <input type="text"><button>Submit</button>
+        <input id="user-input" type="text"><button>Submit</button>
     </form>
     <div style="border: solid, black, 5px">
     <p>Comments:</p>
+    {{#each comments as |comment|}}
     {{> comments-details}}
+    {{/each}}
      </div>
 </div>
 
-
+<!--script tag importing voting.js-->
 <!-- wireframe by NS-->
