@@ -1,4 +1,4 @@
-const userComments = document.getElementById('#user-input');
+// const userComments = document.getElementById('#user-input');
 const commentSubmitBtn = document.getElementById('#comment-submit-btn');
 
 commentSubmitBtn.addEventListener('click', async function() {
