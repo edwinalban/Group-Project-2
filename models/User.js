@@ -9,12 +9,13 @@ class User extends Model {
   }
 
   async validatePassword(password) {
-    const storedHash = this.password; // Get the stored hash from the database
     console.log(password);
-    return bcrypt.compare(password, storedHash);
+  
+    const storedHash = this.password; // Get the stored hash from the database
+    console.log(this.password);
+    return await bcrypt.compare(password, storedHash);
   } 
 }
-
 
 User.init({
   username: {
