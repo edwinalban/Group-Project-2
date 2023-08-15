@@ -62,19 +62,13 @@ loginForm.addEventListener('submit', async (e) => {
   }
 });
 
-//event listeners for cats only and dogs only buttons
-const catsOnlyBtn = document.getElementById("cats-only-btn");
-const dogsOnlyBtn = document.getElementById("dogs-only-btn");
-const votingBtn = document.getElementById("voting-btn");
 
-catsOnlyBtn.addEventListener("click", function(){
-  document.location.href = '/allanimals/cat'; //not sure what the right endpoint is here. 
-});
 
-dogsOnlyBtn.addEventListener("click", function(){
-  document.location.href = '/allanimals/dog';
-});
+
 
 //event listeners for voting buttons add to counter on click? 
-
+const votingBtn = document.getElementById("voting-btn");
 // votingBtn.addEventListener("click", ) 
+
+
+//render comments

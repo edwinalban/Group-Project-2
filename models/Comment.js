@@ -5,11 +5,11 @@ class Comment extends Model {};
 
 Comment.init ({
     comment:{
-        type: DataTypes.STRING,   
+        type: DataTypes.STRING,
     }
 }, {
     sequelize,
-    modelName: "commenting",
+    modelName: "comment",
     timestamps: false
 
 });
