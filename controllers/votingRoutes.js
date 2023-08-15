@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Animals, Cat, Dog, Comment } = require('../models');
 
+//view comments
 router.get('/', async (req,res) => {
   try{
     const dbCommentsData = await Comment.findAll({
@@ -53,7 +54,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-//view comments
+
 
 
 module.exports = router;

@@ -42,49 +42,13 @@ signupForm.addEventListener('submit', async (e) => {
   }
 });
 
-// loginForm.addEventListener('submit', async (e) => {
-//   e.preventDefault();
-
-//   const formData = new FormData(loginForm);
-//   const username = formData.get('email-login');
-//   const password = formData.get('password-login');
-//   console.log(username, password,);
-
-//   try {
-//     const response = await fetch('/login', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ username, password }),
-//     });
-
-//     if (response.ok) {
-//       // Successful login, redirect to homepage or desired route
-//       window.location.href = '/';
-//     } else {
-//       // Handle login error
-//       const errorMessage = await response.text();
-//       console.error(errorMessage);
-//     }
-//   } catch (error) {
-//     console.error('An error occurred:', error);
-//   }
-// });
-
-//event listeners for cats only and dogs only buttons
-const catsOnlyBtn = document.getElementById("cats-only-btn");
-const dogsOnlyBtn = document.getElementById("dogs-only-btn");
+// Voting button (not doing anything yet)
 const votingBtn = document.getElementById("voting-btn");
 
-catsOnlyBtn.addEventListener("click", function(){
-  document.location.href = '/allanimals/cat'; //not sure what the right endpoint is here. 
-});
-
-dogsOnlyBtn.addEventListener("click", function(){
-  document.location.href = '/allanimals/dog';
-});
 
 //event listeners for voting buttons add to counter on click? 
-
+const votingBtn = document.getElementById("voting-btn");
 // votingBtn.addEventListener("click", ) 
+
+
+//render comments
