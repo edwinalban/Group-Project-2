@@ -1,5 +1,15 @@
+* {
+    box-sizing: border-box;
+}
 
-ul.navbar {
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,8 +17,8 @@ ul.navbar {
     background-color: #04f704;
 }
 
-li.navitem {
-    float: left;
+.navitem-wrapper {
+    display: flex;
 }
 
 li.navitem a {
@@ -21,6 +31,10 @@ li.navitem a {
 
 li.navitem a:hover {
     background-color: #555;
+}
+
+.search-wrapper {
+    margin-right: 5vw;
 }
 
 .img-wrapper {
