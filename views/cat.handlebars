@@ -1,14 +1,14 @@
 <section class="card">
-  <a href="/cats/{{id}}">
-    <header>{{cat.name}}</header>
+  <a href="/cat/{{id}}">
+    <header>{{animal.name}}</header>
 
     <div class="card-body">
-      <img src="/assets/images/{{cat.filename}}" alt="{{cat.description}}" style="border: 5px inset black; width: 30vw; height: auto">
-      <p>{{cat.age}} years old</p>
-      <p>{{cat.sex}}</p>
-      <p>{{cat.breed}}</p>
-      <p>{{cat.specialNeeds}}</p>
-      <p>{{cat.location}}</p>
+      <img src="/assets/images/{{animal.filename}}" alt="{{animal.description}}" style="border: 5px inset black; width: 30vw; height: auto">
+      <p>Age:{{animal.age}} years old</p>
+      <p>Sex:{{animal.sex}}</p>
+      <p>Breed: {{animal.breed}}</p>
+      <p>Special Needs:{{animal.specialNeeds}}</p>
+      <p>Location: {{animal.location}}</p>
     </div>
   </a>
 </section>
