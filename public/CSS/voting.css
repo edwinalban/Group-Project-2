@@ -29,7 +29,7 @@ p {
 
 button {
     background-color: #4CAF50;
-    border: none;
+    border: rgb(252, 252, 252) 2px solid;
     color: white;
     padding: 10px 20px;
     text-align: center;
