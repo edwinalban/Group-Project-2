@@ -14,7 +14,9 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #04f704;
+    background-color: #27ae60;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
 }
 
 .navitem-wrapper {
@@ -27,6 +29,7 @@ li.navitem a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 li.navitem a:hover {
@@ -43,3 +46,37 @@ li.navitem a:hover {
     flex-wrap: wrap;
 }
 
+#headline {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kaushan Script', 'cursive';
+    font-size: 50px;
+}
+
+h1 {
+    color: #3498db;
+}
+
+.animal-name {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.animal-gallery {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    margin: 50px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
