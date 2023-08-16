@@ -9,28 +9,13 @@ router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
     const dbAnimalsData = await Animals.findAll({
-      include: [
-        {
-          model: Cat,
-          attributes: ['age'],
-        },
-        {
-          model: Dog,
-          attributes: ['age'],
-        },
-      ],
     });
-    const dbCommentsData = await Comment.findAll();
-    const comments = dbCommentsData.map((comments) =>
-    comments.get({ plain: true })
-    );
-    console.log(comments)
     console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) => 
     animals.get({ plain: true })
     );
     res.render('voting', {
-      animals,comments
+      animals,
       // loggedIn: req.session.loggedIn,
     });
   } catch(err){
@@ -39,17 +24,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', async (req,res) => {
-  try{
-    const newComment = await Comment.create(req.body);
-  if(!newComment) {
-    res.status(404).json({ message: "cannot create new post" })
-  }
-  res.status(200).json ({ newComment })
-} catch(err){
-  res.status(500).json(err);}
 
-});
 
 
 

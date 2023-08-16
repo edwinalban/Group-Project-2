@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { Animals, Cat, Dog } = require('../models');
+const { Animals } = require('../models');
 
 
-// View all animals
+// View all animals WORKING
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
@@ -22,16 +22,16 @@ router.get('/', async (req, res) => {
   }
 });
 
-// View one animal
+// View one animal goes to page but no animal renders. NOT WORKING
 router.get('/:animal/:id', async (req, res) => {
   try {
       const dbanimalData = await Animals.findByPk(req.params.id, {
       });
-      const animal = dbanimalData.get({ plain: true });
-      console.log(animal);
+      const animals = dbanimalData.get({ plain: true });
+   
       // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
       res.render('allanimals', {
-          animal,
+          animals,
       });
   } catch (err) {
       console.log(err);
@@ -40,7 +40,7 @@ router.get('/:animal/:id', async (req, res) => {
 });
 
 
-// View all cats or dogs
+// View all cats or dogs  WORKING
 router.get('/:animal', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
