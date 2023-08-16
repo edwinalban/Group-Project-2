@@ -10,9 +10,9 @@ Animals.init ({
         autoIncrement:true,
     },
     animalType: {
-        type: dataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
-    }
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
