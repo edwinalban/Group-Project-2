@@ -8,9 +8,11 @@ commentSubmitBtn.addEventListener('click', async function() {
         headers: {
             'Content-Type': 'application/json', 
         },
-    });
+    })
     if(response.ok) {
         window.location.href = '/voting';
+        return comments;
+        console.log(comments);
     } else {
         const errorMessage = await response.text();
         console.log(errorMessage);

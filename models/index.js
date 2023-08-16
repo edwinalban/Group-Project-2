@@ -10,6 +10,11 @@ Dog.belongsTo(Animals, {foreignKey: 'animal_id'});
 Animals.hasMany(Cat, {foreignKey: 'animal_id'});
 Animals.hasMany(Dog, {foreignKey: 'animal_id'});
 
+
+Comment.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+
 module.exports = {
   Animals,
   Cat,

@@ -9,9 +9,7 @@ Comment.init ({
     }
 }, {
     sequelize,
-    modelName: "comment",
-    timestamps: false
-
+    modelName: "comment"
 });
 
 module.exports = Comment;
