@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Animals, Cat, Dog } = require('../models');
+const { Animals } = require('../models');
 
 
 // View all animals
@@ -23,20 +23,20 @@ router.get('/', async (req, res) => {
 });
 
 // View one animal
-router.get('/:id', async (req, res) => {
-  try {
-      const dbanimalData = await Animals.findByPk(req.params.id, {
-      });
-      const animal = dbanimalData.get({ plain: true });
-      // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
-      res.render('allanimals', {
-          animal,
-      });
-  } catch (err) {
-      console.log(err);
-      res.status(404).json(err);
-  }
-});
+// router.get('/:id', async (req, res) => {
+//   try {
+//       const dbanimalData = await Animals.findByPk(req.params.id, {
+//       });
+//       const animal = dbanimalData.get({ plain: true });
+//       // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
+//       res.render('allanimals', {
+//           animal,
+//       });
+//   } catch (err) {
+//       console.log(err);
+//       res.status(404).json(err);
+//   }
+// });
 
 
 // View all cats or dogs
@@ -53,7 +53,7 @@ router.get('/:animal', async (req, res) => {
     const animals = dbAnimalsData.map((animals) => 
     animals.get({ plain: true })
     );
-    res.render('allAnimals', {
+    res.render('allanimals', {
       animals,
       // loggedIn: req.session.loggedIn,
     });
