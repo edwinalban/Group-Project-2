@@ -80,3 +80,17 @@ h1 {
     margin-bottom: 35px;
     margin-top: 10px;
 }
+
+#suggestion-box {
+    width: 200px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(212, 212, 212);
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    padding: 5px 30px 5px 30px;
+    box-shadow: 0px 0px 10px rgb(204, 204, 204);
+}
