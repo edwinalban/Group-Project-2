@@ -1,0 +1,9 @@
+<section class="container">
+    <!-- If the user is logged in, render all animal content -->
+    {{!-- {{#if loggedIn}} --}}
+    <section class="img-wrapper">
+        {{#each animals as |animal|}}
+        {{> animal-details}}
+        {{/each}}
+    </section>
+</section>

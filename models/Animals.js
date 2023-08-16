@@ -9,6 +9,10 @@ Animals.init ({
         primaryKey: true,
         autoIncrement:true,
     },
+    animalType: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -17,10 +21,39 @@ Animals.init ({
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    sex: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    breed: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    specialNeeds: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    location:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
     filename: {
         type: DataTypes.STRING,
         allowNull: true,
-    }
+    },
+    description:{
+        type: DataTypes.STRING, 
+        allowNull: false,
+    },
+    petOfTheMonth: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+    }, 
+    voteCount: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        allowNull: true,
+    } 
 }, {
     sequelize,
     modelName: "animals",
