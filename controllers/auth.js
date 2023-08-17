@@ -18,6 +18,8 @@ class AuthController {
         console.log('Bcrypt compare result:', validPassword);
         return res.status(401).json({ message: 'Incorrect Username or Password' });
       }
+      user.isLoggedIn = true;
+      await user.save();
 
       res.status(200).json({ message: 'Login Successful!' });
     } catch (error) {
