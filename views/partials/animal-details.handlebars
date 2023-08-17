@@ -1,10 +1,17 @@
 <section class="card">
-  <a href="allanimals/{{id}}">
+ 
   
   <h3 class="animal-name">{{name}}</h3>
     <div class="card-body">
       <img src="/assets/images/{{filename}}" alt="{{description}}"
         style="border: 5px inset black; width: 30vw; height: 50vh;">
     </div>
-  </a>
+  <div class="animal-details"> 
+ <p>Age:{{age}} years old</p>
+      <p>Sex:{{sex}}</p>
+      <p>Breed: {{breed}}</p>
+      <p>Special Needs:{{specialNeeds}}</p>
+      <p>Location: {{location}}</p>
+    </div>
+
 </section>
