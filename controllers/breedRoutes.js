@@ -8,12 +8,12 @@ router.get('/:breed', async (req, res) => {
                 breed: req.params.breed
             }
         })
-        const animal = dbBreedData.map((animal) =>
-        animal.get({plain: true})
+        const animals = dbBreedData.map((animals) =>
+        animals.get({plain: true})
         );
-        console.log(animal);
+        console.log(animals);
         res.render('breed', {
-            animal,
+            animals,
         });
     } catch (err) {
     console.log(err);
