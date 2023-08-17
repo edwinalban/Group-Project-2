@@ -1,13 +1,26 @@
-ul.navbar {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #04f704;
+    background-color: #27ae60;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
 }
 
-li.navitem {
-    float: left;
+.navitem-wrapper {
+    display: flex;
 }
 
 li.navitem a {
@@ -16,14 +29,71 @@ li.navitem a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 li.navitem a:hover {
     background-color: #555;
 }
 
+.search-wrapper {
+    margin-right: 5vw;
+}
+
 .img-wrapper {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+#headline {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kaushan Script', 'cursive';
+    font-size: 50px;
+}
+
+h1 {
+    color: #3498db;
+}
+
+.animal-name {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    color: #3498db;
+
+}
+
+.animal-gallery {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    margin: 50px;
+    color: black;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+#suggestion-box {
+    width: 200px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(212, 212, 212);
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    padding: 5px 30px 5px 30px;
+    box-shadow: 0px 0px 10px rgb(204, 204, 204);
 }

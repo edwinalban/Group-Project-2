@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Social Whiskers Home Page</title>
 </head>
-
 <body>
     <div class="container">
         <img src="" alt="">
-        <class="form group">
-           <button><a id="login-submit" href="/login"> Log In</a></button> 
-           <button><a id="signout-submit" href="/logout"> Log Out</a></button> 
+        <class ="form group">
+            {{!-- {{#if !logged_in}} --}}
+            <a href="/login">
+            <button id="login-submit">Log In</button>
+            </a>
+            <button id="signout-submit" >Log Out</button>
+            {{!-- {{/if}} --}}
             <p>Don't have a login?</p>
-            <button>  <a id="signup-submit" href="/signup"> Sign Up With Social Whiskers!</a> </button> 
-        </class>
-    </div>
+            <a href ="/signup">
+            <button id="signup-submit"> Sign Up With Social Whiskers!</button>
+            </a>
+            </class>
+        </div>
     </div>
 </body>
-
 </html>

@@ -2,106 +2,48 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Whiskers</title>
-
-<body>
-    <style>
-        ul.navbar {
-            list-style-type: none;
-            margin: 1;
-            padding: 2;
-            overflow: hidden;
-            background-color: #8a5b04;
-        }
-
-        li.navitem {
-            float: right;
-        }
-
-        li.navitem a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li.navitem a:hover {
-            background-color: #555;
-        }
-    </style>
-    <ul class="navbar">
-        <li class="navitem"><a href="/"> Home </a></li>
-        <li class="navitem"><a href='/cat.js'> View Cats </a></li>
-        <li class="navitem"><a href='/dog.js'> View Dogs </a></li>
-        <li class="navitem"><a href='/vote'> Vote for Pet of the Month </a></li>
-        <li class="navitem"><a href='/seeFavs'> View Favorites </a></li>
-        <li class="navitem"><a href='/seeFavs'> View Favorites </a></li>
-        {{!-- Navbar - NS --}}
-</body>
-=======
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Whiskers</title>
-  <link rel="stylesheet" type="text/css" href="/CSS/main.css">
->>>>>>> 709a9c1938829c0522fc7c357b23a372214fe41c
+  {{!--
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> --}}
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="/CSS/main.css">
+  <link rel="stylesheet" href="/CSS/voting.css">
 </head>
 
-
 <body>
-<<<<<<< HEAD
-    <header class="">
-        <h1>
-            Social Whiskers
-        </h1>
-    </header>
-    <main class="">
-        {{{body}}}
-    </main>
-
-    <head>
-    </head>
-
-    <body>
-        <div class="container">
-            <img src="" alt="">
-            <div>
-                <class="form group">
-                    <button><a href="./login">Log In</a></button>
-                    <button>Log Out</button>
-                    <p>Don't have a login?</p>
-                    <button><a href="./signup">Sign Up With Social Whiskers!</a></button>
-                </class>
-            </div>
-        </div>
-    </body>
-
-=======
   <header class="">
     <ul class="navbar">
-      <li class="navitem"><a href="/"> Home </a></li>
-      <li class="navitem"><a href='/cats'> View Cats </a></li>
-      <li class="navitem"><a href='/dogs'> View Dogs </a></li>
-      <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li>
-      <li class="navitem"><a href='/seeFavs'> View Favorites </a></li>
+
+      {{!-- <li class="navitem"><a href='/seeFavs'> View Favorites </a></li> --}}
+      <div class="navitem-wrapper">
+        <li class="navitem"><a href="/"> Home </a></li>
+        <li class="navitem"><a href='/allanimals/cat'> View Cats </a></li>
+        <li class="navitem"><a href='/allanimals/dog'> View Dogs </a></li>
+        <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li>
+      </div>
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search by Breed" />
+        <button>Search</button>
+      </div>
     </ul>
     {{!-- Navbar - NS --}}
-    <h1>
-      Social Whiskers
+    <h1 id="headline">
+      Social Whiskers &nbsp;<i class="fa-solid fa-paw"></i>
     </h1>
   </header>
   <main>
     {{{body}}}
   </main>
   <footer>
-
+    <p>FOLLOW US ON SOCIAL MEDIA</p>
+    <p>Email us @ socialwhiskers@gmail.com to adopt today!</p>
   </footer>
 </body>
->>>>>>> 709a9c1938829c0522fc7c357b23a372214fe41c
+<script src="https://kit.fontawesome.com/3bd957b710.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/predictionary/dist/predictionary.min.js"></script>
+<script src="/js/predictionary.js"></script>
 
 </html>
-
-{{! add in the pet of the month here? Then it can display on all pages? }}

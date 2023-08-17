@@ -1,30 +1,24 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html>
-
-=======
->>>>>>> 709a9c1938829c0522fc7c357b23a372214fe41c
 <head>
     <title>Pet Voting Page</title>
     <link rel="stylesheet" type="text/css" href="/CSS/voting.css">
 </head>
 
-<body>
-    <header>
-    </header>
+<div class="img-wrapper">
+    {{#each animals as |animal|}}
+    {{> voting-details}}
+    {{/each}}
+</div>
+<div>
+    <form class="comment-form">Add a comment about your favorite animal!
+        <input id="user-input" type="text"><button id="comment-submit-btn">Submit</button>
+    </form>
+    <div class="comments" style="border: solid, black, 5px">
+    <p id="comment-header">Comments:</p>
+    {{#each comments as |comment|}}
+    {{> comments-details}}
+    {{/each}}
+     </div>
+</div>
 
-    <main>
-        <div>
-            <h2>CATEGORY IS: Best Starry Eyes</h2>
-            <button img src=".assets/cat1.jpg" alt="photo of featured pet" style="border: 5px inset black;">Vote for
-                this Cat!</button>
-            <button img src=".assets/dog2.jpg" alt="photo of featured pet" style="border: 5px inset black;">Vote for
-                this Dog!</button>
-        </div>
-        <p>View all adoptable pets</p>
-        <button class="search-button">Search</button>
-    </main>
-</body>
-
-</html>
+<!--script tag importing voting.js-->
 <!-- wireframe by NS-->
