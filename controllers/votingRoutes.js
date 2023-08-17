@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { Animals, Comment } = require('../models');
-
+const withAuth = require('../utils/auth');
 
 // View all animals
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try {
     const dbAnimalsData = await Animals.findAll({
