@@ -1,4 +1,4 @@
-const signoutButton = document.getElementById('signout-submit');
+const signoutButton = document.getElementById('logout-button');
 
 signoutButton.addEventListener('click', async (e) => {
   e.preventDefault();

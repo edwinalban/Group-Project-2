@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/User');
-const AuthController = require('../controllers/auth');
+
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('login');
