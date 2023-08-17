@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try {
     const dbAnimalsData = await Animals.findAll({
+      order: [[ "voteCount", "DESC"]]
     });
     const comments = await Comment.findAll();
     const newComment = comments.map((comment) => 
@@ -26,5 +27,19 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.put('/', async (req, res) => {
+  console.log("req.body is here", req.body);
+  try {
+    const dbAnimalsData = await Animals.update({ // takes id, votecount
+      voteCount: req.body.voteCount}, {
+      where: {id: req.body.id} })
+      res.json(dbAnimalsData)
+    } catch (err){
+      console.log(err)
+      res.status(500).json(err);
+    }
+  
+   })
 
 module.exports = router;
