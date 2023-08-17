@@ -24,26 +24,47 @@ router.get('/', async (req, res) => {
   }
 });
 //eventlistener for vote
-app.post('/vote', (req, res) => {
-  const selectedItemId = req.body.itemId; //assuming itemID
+router.post('/vote', (req, res) => {
+  const selectedItemId = req.body.id; //assuming itemID
   castVote(selectedItemId);
+  database.updateVoteCount(selectedItemId);
   res.json({ message: "Vote submitted" });
 });
 
-function castVote(itemID) {
-  console.log('Vote caste for item with ID ${itemID}');
-}
+function castVote(id)
+fetch('/vote', {
+  method: 'POST',
+  body: JSON.stringify({ id })
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('failed to submit Vote')
+    }
+  return response.json();
+  })
+  .then(data => {
+    //handle response from server e.g. update UI 
+  })
+console.log('Vote cast for item with ID ${itemID}');
+
+// .catch (error => {
+//   console.error('Error:', error);
+// });
+
 document.querySelectorAll(".vote-button").forEach(button => {
   button.addEventListener("click", function () {
-    const itemId = selectedItemId;
-    castVote(itemId);
+    const id = selectedItemId;
+    castVote(selectedItemIdid);
   });
+
 });
 
+
+
 //eventListener for comment submission
-document.getElementById("comment-submit-btn").addEventListener("click", function(event){
+document.getElementById("comment-submit-btn").addEventListener("click", function (event) {
   event.preventDefault();
-  const userInput= document.getElementById("user-input").ariaValueMax; 
+  const userInput = document.getElementById("user-input").ariaValueMax;
   submitComment(userInput);
 });
 
