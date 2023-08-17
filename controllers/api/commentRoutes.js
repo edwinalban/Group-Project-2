@@ -2,9 +2,10 @@ const { Comment } = require('../../models')
 const router = require('express').Router()
 
 router.post('/', async (req, res) => {
+    console.log("trying to post", req.body);
     try {
         const newComment = await Comment.create({
-            ...req.body, 
+            comment: req.body.comment, 
         // user_id: req.session.user_id
     });
         if (!newComment) {
@@ -16,6 +17,25 @@ router.post('/', async (req, res) => {
     }
 
 });
+
+router.get('/', async (req, res) => {
+    // Send the rendered Handlebars.js template back as the response
+    try{
+      const commentsData = await Comment.findAll({
+      });
+      console.log(commentsData);
+      const comments = commentsData.map((comments) => 
+      comments.get({ plain: true })
+      );
+      res.render('voting', {
+        comments,
+        // loggedIn: req.session.loggedIn,
+      });
+    } catch(err){
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 
 

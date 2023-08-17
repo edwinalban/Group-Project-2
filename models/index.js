@@ -5,9 +5,9 @@ const Comment = require('./Comment');
 // Set up relationships between models
 
 
-Comment.belongsTo(User, {
-  foreignKey: 'user_id'
-})
+// Comment.belongsTo(User, {
+//   foreignKey: 'user_id'
+// })
 
 module.exports = {
   Animals,

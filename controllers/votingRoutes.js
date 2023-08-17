@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const { Animals, Cat, Dog, Comment } = require('../models');
-
-
+const { Animals, Comment } = require('../models');
 
 
 // View all animals
@@ -10,12 +8,17 @@ router.get('/', async (req, res) => {
   try {
     const dbAnimalsData = await Animals.findAll({
     });
+    const comments = await Comment.findAll();
+    const newComment = comments.map((comment) => 
+    comment.get({ plain: true })
+    );
+
     console.log(dbAnimalsData);
     const animals = dbAnimalsData.map((animals) =>
       animals.get({ plain: true })
     );
     res.render('voting', {
-      animals,
+      animals,comments: newComment,
       // loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -23,17 +26,5 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-//eventlistener for vote
-router.post('/vote', (req, res) => {
-  const selectedItemId = req.body.id; //assuming itemID
-  castVote(selectedItemId);
-  database.updateVoteCount(selectedItemId);
-  res.json({ message: "Vote submitted" });
-});
-
-
-
-
 
 module.exports = router;
