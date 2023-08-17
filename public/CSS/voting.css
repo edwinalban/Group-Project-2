@@ -16,14 +16,42 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-h1, h2, h3 {
+#login-submit {
+    position: relative;
+    left: 80px;
+}
+
+h1 {
     color: #3498db; /* Blue color */
+}
+
+.animal-name, h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    color: #3498db;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+
 }
 
 p {
     color: #27ae60; /* Green color */
+    display: flex;
+    justify-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button {
@@ -74,4 +102,15 @@ a:hover {
     font-size: 20px;
     font-weight: bolder;
 }
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+
+
+
 /* CSS - NS */

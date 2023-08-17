@@ -1,26 +1,21 @@
-console.log("linked");
+// console.log("linked");
 function castVote() {
   console.log("voting");
 fetch('/voting', {
+  
   // get current voteCount
   // increment VC by 1
   // make put req with new VC
   method: "PUT",
-  body: JSON.stringify({ id: 2, voteCount: 300 }),
+  body: JSON.stringify({ id:1, voteCount: 0}),
   headers: {
     "Content-Type": "application/json"
   }
 })
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('failed to submit Vote')
-//     }
-//   return response.json();
-//   })
-//   .then(data => {
-//     //handle response from server e.g. update UI 
-//   })
-// console.log('Vote cast for item with ID ${itemID}');
+// const currentVote = this.voteCount;
+// currentVote.addEventListener("click", currentVote++);
+// alert("Thank you for voting!");
+
 }
 
 // .catch (error => {
@@ -30,10 +25,8 @@ fetch('/voting', {
 //document.getElementById("voting-btn2").addEventListener("click", castVote)
 $(".voting-btn").on("click",castVote)
 
-// forEach(button => {
-//   button.addEventListener("click", function () {
-//     const id = selectedItemId;
-//     castVote(selectedItemId);
-//   });
+//each button should have an id attached now. 
 
-// });
+
+
+
