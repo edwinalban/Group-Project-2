@@ -28,10 +28,10 @@ router.get('/:animal/:id', async (req, res) => {
       const dbanimalData = await Animals.findByPk(req.params.id, {
       });
       const animals = dbanimalData.get({ plain: true });
-   
+      console.log(animals);
       // res.render('allAnimals', { animals, loggedIn: req.session.loggedIn });
-      res.render('allanimals', {
-          animals,
+      res.render('allanimals', { 
+        animals: [animals]
       });
   } catch (err) {
       console.log(err);
