@@ -2,7 +2,6 @@
     <title>Pet Voting Page</title>
     <link rel="stylesheet" type="text/css" href="/CSS/voting.css">
 </head>
-
 <div class="img-wrapper">
     {{#each animals as |animal|}}
     {{> voting-details}}
@@ -13,11 +12,11 @@
         <input id="user-input" type="text"><button id="comment-submit-btn">Submit</button>
     </form>
     <div class="comments" style="border: solid, black, 5px">
-    <p id="comment-header">Comments:</p>
-    {{#each comments as |comment|}}
-    {{> comments-details}}
-    {{/each}}
-     </div>
+        <p id="comment-header">Comments:</p>
+        {{#each comments as |comment|}}
+        {{> comments-details}}
+        {{/each}}
+    </div>
 </div>
 <div>
     <button id="logout-button">Logout</button>
@@ -26,6 +25,4 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/js/comments.js"></script>
 <script src="/js/voting.js"></script>
-
- <!--CHECK ROUTE -->
-<!-- wireframe by NS-->
+<script src="../js/index.js"></script>

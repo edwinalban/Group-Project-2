@@ -1,6 +1,4 @@
 <section class="container">
-    <!-- If the user is logged in, render all animal content -->
-    {{!-- {{#if loggedIn}} --}}
     <section class="img-wrapper">
         {{#each animals as |animal|}}
         {{> animal-details}}
@@ -10,5 +8,4 @@
 <div>
     <button id="logout-button">Logout</button>
 </div>
-
 <script src="../js/index.js"></script>
