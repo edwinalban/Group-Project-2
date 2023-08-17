@@ -1,7 +1,5 @@
 let predictionary = Predictionary.instance();
 predictionary.addWords(['Tabby', 'Calico', 'Short-Hair', 'Chihuahua', 'German Shepard', 'German Shepard/Pitt', 'Husky']);
-// let suggestions = predictionary.predict('lo', 'ca');
-// console.log(suggestions);
 
 const inputField = document.querySelector('.search-wrapper').children[0];
 
