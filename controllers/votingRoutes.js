@@ -23,29 +23,15 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 //eventlistener for vote
-app.post('/vote', (req, res) => {
-  const selectedItemId = req.body.itemId; //assuming itemID
+router.post('/vote', (req, res) => {
+  const selectedItemId = req.body.id; //assuming itemID
   castVote(selectedItemId);
+  database.updateVoteCount(selectedItemId);
   res.json({ message: "Vote submitted" });
 });
 
-function castVote(itemID) {
-  console.log('Vote caste for item with ID ${itemID}');
-}
-document.querySelectorAll(".vote-button").forEach(button => {
-  button.addEventListener("click", function () {
-    const itemId = selectedItemId;
-    castVote(itemId);
-  });
-});
-
-//eventListener for comment submission
-document.getElementById("comment-submit-btn").addEventListener("click", function(event){
-  event.preventDefault();
-  const userInput= document.getElementById("user-input").ariaValueMax; 
-  submitComment(userInput);
-});
 
 
 
