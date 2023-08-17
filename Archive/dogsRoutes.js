@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Dog } = require('../models')
+const withAuth = require('../utils/auth');
 
 // Get all dogs
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const dbDogData = await Dog.findAll({
         });
@@ -20,7 +21,7 @@ router.get('/', async (req, res) => {
 });
 
 //get one dog - same status as cat right now. 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const dbDogData = await Dog.findByPk(req.params.id, {
         });
