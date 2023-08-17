@@ -1,45 +1,23 @@
-const signupForm = document.querySelector('#signup-form');
-const signupSubmission = document.querySelector('#signup-submit');
-const loginForm = document.querySelector('#login-form');
-const loginSubmitButton = document.querySelector('#login-submit');
-const username = signupForm.querySelector('#email-login').value;
-const password = signupForm.querySelector('#password-login').value;
-const confirmPassword = signupForm.querySelector('#confirm-password-login').value;
+const signoutButton = document.getElementById('signout-submit');
 
-signupForm.addEventListener('submit', async (e) => {
+signoutButton.addEventListener('click', async (e) => {
   e.preventDefault();
 
-  // Get form info
-  const formData = new FormData(signupForm);
-  const username = formData.get('email-login'); // Update with the correct input name for username
-  const password = formData.get('password-login');
-  const confirmPassword = formData.get('confirm-password-login');
-  console.log(username, password, confirmPassword);
-
-  // Validate passwords
-  if (password !== confirmPassword) {
-    console.error('Passwords do not match');
-    return;
-  }
-
   try {
-    const response = await fetch('/signup', {
+    
+    const response = await fetch('/logout', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
+      credentials: 'include' // Include credentials (cookies) in the request
     });
 
     if (response.ok) {
+      // Redirect to the login page after successful logout
       window.location.href = '/login';
     } else {
-      const errorMessage = await response.text();
-      console.error(errorMessage);
+      // Handle logout error
+      console.error('Error logging out');
     }
   } catch (error) {
-    console.error('An error has occurred:', error);
+    console.error('Error:', error);
   }
 });
-
-

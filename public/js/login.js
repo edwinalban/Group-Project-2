@@ -17,10 +17,11 @@ loginForm.addEventListener('submit', async (e) => {
         },
         body: JSON.stringify({ username, password }),
       });
+      console.log(response);
   
       if (response.ok) {
         // Successful login, redirect to homepage or desired route
-        window.location.href = '/';
+        window.location.href = '/landing';
       } else {
         // Handle login error
         const errorMessage = await response.text();

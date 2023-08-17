@@ -8,6 +8,7 @@ const loginRoutes = require('./loginRoutes');
 const signupRoutes = require('./signupRoutes');
 const votingRoutes = require('./votingRoutes');
 const breedRoutes = require('./breedRoutes');
+const logoutRoutes = require('./logoutRoute')
 
 router.use('/', homeRoutes);
 router.use('/allanimals', allAnimalsRoutes);
@@ -18,5 +19,5 @@ router.use('/login', loginRoutes);
 router.use('/signup', signupRoutes);
 router.use('/voting', votingRoutes);
 router.use('/animals-by-breed', breedRoutes);
-
+router.use('/logout', logoutRoutes);
 module.exports = router;
