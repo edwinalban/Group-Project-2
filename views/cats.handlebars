@@ -1,7 +1,5 @@
 <section class="container">
   <h3 class="animal-gallery">Adoptable Cats</h3>
-  <!-- If the user is logged in, render all animal content -->
-  {{!-- {{#if loggedIn}} --}}
   <section class="flex-row justify-center">
     {{#each cats}}
     {{> cat-details}}
@@ -9,14 +7,5 @@
   </section>
 </section>
 <div>
-    <button id="logout-button">Logout</button>
+  <button id="logout-button">Logout</button>
 </div>
-
-
-<!-- Otherwise, provide a link to login -->
-{{!-- {{else}}
-<a href="/login">You must login first to view this page</a>
-{{/if}} --}}
-
-
-<!--commented out the "if logged in" logic because it's not functioning yet.-->

@@ -1,6 +1,5 @@
 const userComments = document.getElementById('user-input');
 const commentSubmitBtn = document.getElementById('comment-submit-btn');
-// const userInput = 
 
 commentSubmitBtn.addEventListener('click', async function() {
     try {
