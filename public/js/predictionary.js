@@ -1,6 +1,6 @@
 // Sets up words for autocomplete dictionary
 let predictionary = Predictionary.instance();
-predictionary.addWords(['Tabby', 'Calico', 'Grey', 'Chihuahua', 'Shepard', 'Husky']);
+predictionary.addWords(['Tabby', 'Calico', 'Grey', 'Chihuahua', 'Shepard', 'Pittbull', 'Husky']);
 
 const inputField = document.querySelector('.search-wrapper').children[0];
 

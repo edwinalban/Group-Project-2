@@ -12,7 +12,6 @@ const animalsData = [
         filename: "cat1.jpg",
         description: "Cat standing in grass",
         petOfTheMonth: false,
-        voteCount: 20
     },
     {
         animalType: "cat",
@@ -25,7 +24,6 @@ const animalsData = [
         filename: "cat2.jpg",
         description: "Cat sleeping on mug",
         petOfTheMonth: false,
-        voteCount: 100
     },
     {
         animalType: "cat",
@@ -74,7 +72,6 @@ const animalsData = [
         filename: "dog1.jpg",
         description: "Dog in witch costume",
         petOfTheMonth: false,
-        voteCount: 50
     },
     {
         animalType: "dog",
