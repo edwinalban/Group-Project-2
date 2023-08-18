@@ -1,32 +1,18 @@
-// console.log("linked");
-function castVote() {
+// Function to get current vote count, add vote to count when button is clicked
+async function castVote() {
+  const id = $(this).attr("id");
+  const voteCount = parseInt($(`#vote${id}`).text()) + 1;
 
-  fetch('/voting', {
-
-    // get current voteCount
-    method: "GET",
-    body: { id, voteCount },
-    headers: {
-      "Content-Type": "application/json"
-    },
-    // increment VC by 1
-
+  await fetch('/voting', {
     method: "PUT",
     body: JSON.stringify({ id, voteCount }),
     headers: {
       "Content-Type": "application/json"
     }
   })
-  // const currentVote = this.voteCount;
-  // currentVote.addEventListener("click", currentVote++);
-  // alert("Thank you for voting!");
+  window.location.href = '/voting'
 
 }
-
-// .catch (error => {
-//   console.error('Error:', error);
-// });
-
 
 $(".voting-btn").on("click", castVote)
 

@@ -12,7 +12,6 @@ const animalsData = [
         filename: "cat1.jpg",
         description: "Cat standing in grass",
         petOfTheMonth: false,
-        voteCount: 20
     },
     {
         animalType: "cat",
@@ -25,14 +24,13 @@ const animalsData = [
         filename: "cat2.jpg",
         description: "Cat sleeping on mug",
         petOfTheMonth: false,
-        voteCount: 100
     },
     {
         animalType: "cat",
         name: "Wedge",
         age: 1,
         sex: "male",
-        breed: "Grey",
+        breed: "Short-Hair",
         specialNeeds: "Thinks he is a bat.",
         location: "Cottage Grove, OR",
         filename: "cat3.jpg",
@@ -44,7 +42,7 @@ const animalsData = [
         name: "Walter",
         age: 8,
         sex: "female",
-        breed: "Grey",
+        breed: "Short-Hair",
         specialNeeds: "Special Diet: Gluten Free",
         location: "Roseburg, OR",
         filename: "cat4.jpg",
@@ -74,14 +72,13 @@ const animalsData = [
         filename: "dog1.jpg",
         description: "Dog in witch costume",
         petOfTheMonth: false,
-        voteCount: 50
     },
     {
         animalType: "dog",
         name: "Sisu",
         age: 3,
         sex: "female",
-        breed: "Shepard",
+        breed: "German Shepard",
         specialNeeds: "Bad hip",
         location: "Portland, OR",
         filename: "dog2.jpg",
