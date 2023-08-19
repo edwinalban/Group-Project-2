@@ -6,28 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Whiskers</title>
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="/CSS/main.css">
   <link rel="stylesheet" href="/CSS/voting.css">
 </head>
 
 <body>
-  <header class="">
+  <header>
     <ul class="navbar">
       <div class="navitem-wrapper">
+        <h1 id="headline">
+      Social Whiskers &nbsp;<i class="fa-solid fa-paw"></i>
+    </h1>
         <li class="navitem"><a href="/landing"> Home </a></li>
         <li class="navitem"><a href='/allanimals/cat'> View Cats </a></li>
         <li class="navitem"><a href='/allanimals/dog'> View Dogs </a></li>
         <li class="navitem"><a href='/voting'> Vote for Pet of the Month </a></li>
       </div>
+      
       <div class="search-wrapper">
         <input type="text" placeholder="Search by Breed" />
         <button id="search-btn">Search</button>
       </div>
     </ul>
-    <h1 id="headline">
-      Social Whiskers &nbsp;<i class="fa-solid fa-paw"></i>
-    </h1>
+    
   </header>
   <main>
     {{{body}}}
@@ -37,9 +40,13 @@
     <p>Email us at socialwhiskers@gmail.com to adopt today!</p>
   </footer>
 </body>
+<script src="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js
+"></script>
 <script src="https://kit.fontawesome.com/3bd957b710.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/predictionary/dist/predictionary.min.js"></script>
 <script src="/js/predictionary.js"></script>
 <script src="/js/breedSearch.js"></script>
+<script src="/js/landing.js"></script>
 
 </html>

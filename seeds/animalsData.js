@@ -103,7 +103,7 @@ const animalsData = [
         age: 10,
         sex: "female",
         breed: "Husky",
-        specialNeeds: "Special Diet: food imported from Italy only",
+        specialNeeds: "Only eats Italian",
         location: "Beaverton, OR",
         filename: "dog4.jpg",
         description: "dog headshot",

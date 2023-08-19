@@ -18,5 +18,3 @@ $(".voting-btn").on("click", castVote)
 
 
 
-
-
