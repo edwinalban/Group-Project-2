@@ -1,13 +1,8 @@
 const router = require('express').Router();
-// const User  = require('../models/User'); // Make sure to import your User model
 
 router.post('/', async (req, res) => {
   try {
     if (req.session.isLoggedIn) {
-      // Update isLoggedIn status to false in the database
-    // await User.update({ isLoggedIn: false }, { where: { id: userId } });
-      
-
       // Destroy the session and log the user out
       req.session.destroy(err => {
         if (err) {

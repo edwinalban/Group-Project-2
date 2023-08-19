@@ -21,8 +21,6 @@ class newUser {
       return { success: false, message: 'An error occurred' };
     }
   }
-
-  // Other user-related actions (login, logout, etc.) can also be defined here
 }
 
 module.exports = newUser;

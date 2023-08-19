@@ -2,7 +2,6 @@
 async function castVote() {
   const id = $(this).attr("id");
   const voteCount = parseInt($(`#vote${id}`).text()) + 1;
-
   await fetch('/voting', {
     method: "PUT",
     body: JSON.stringify({ id, voteCount }),
