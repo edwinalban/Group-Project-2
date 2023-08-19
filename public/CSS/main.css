@@ -48,19 +48,21 @@ li.navitem a:hover {
 
 img {
     border: 5px inset black;
-    width: 560px;
-    height: 720px;
+    width: 330px;
+    height: 400px;
 }
 
 #headline {
     display: flex;
     justify-content: center;
     font-family: 'Kaushan Script', 'cursive';
-    font-size: 50px;
+    font-size: 30px;
+    margin-right: 50px;
+    margin-left: 15px;
 }
 
 h1 {
-    color: #3498db;
+    color: #ffffff;
 }
 
 .animal-name {
@@ -83,15 +85,15 @@ h1 {
     color: black;
 }
 
-.card-body {
+/* .card-body {
     display: flex;
     justify-content: center;
     margin-bottom: 35px;
     margin-top: 10px;
-}
+} */
 
 .voting-btn {
-    width: 560px;
+    width: 330px;
     margin: 0;
 }
 
@@ -139,4 +141,27 @@ footer {
         width: 250px;
         margin: 0;
     }
+}
+
+.pet-of-month-card {
+    display: block;
+    justify-content: space-between;
+}
+
+.articles {
+    width: 25%;
+    /* border: black 2px solid; */
+    padding: 30px;
+    justify-content: center;
+
+}
+
+
+#home-format{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.amazon-button {
+    margin-left: 4em;
 }

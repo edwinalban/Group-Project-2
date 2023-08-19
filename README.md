@@ -20,6 +20,7 @@ Sequelize
 Mysql2
 Bcrypt
 Dotenv
+Bootstrap
 
 
 ## Usage
@@ -28,7 +29,7 @@ View the app deployed in Heroku and either sign in or log in to use page. If you
 
 ## Credits
 Predictionary documentation: https://snyk.io/advisor/npm-package/predictionary?utm_medium=referral&utm_source=skypack&utm_campaign=snyk-widget
-
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
 ## License  
 
 ## Tests
