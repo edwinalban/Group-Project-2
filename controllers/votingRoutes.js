@@ -20,7 +20,6 @@ router.get('/', withAuth, async (req, res) => {
     );
     res.render('voting', {
       animals,comments: newComment,
-      // loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

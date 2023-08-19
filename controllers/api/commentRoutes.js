@@ -6,7 +6,6 @@ router.post('/', async (req, res) => {
     try {
         const newComment = await Comment.create({
             comment: req.body.comment, 
-        // user_id: req.session.user_id
     });
         if (!newComment) {
             res.status(404).json({ message: "cannot create new post" })
@@ -29,7 +28,6 @@ router.get('/', async (req, res) => {
       );
       res.render('voting', {
         comments,
-        // loggedIn: req.session.loggedIn,
       });
     } catch(err){
       console.log(err);

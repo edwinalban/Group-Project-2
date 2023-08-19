@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Animals } = require('../models');
 const withAuth = require('../utils/auth');
 
-// View all animals WORKING
+// View all animals
 router.get('/', withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
@@ -22,8 +22,9 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// View one animal goes to page but no animal renders. NOT WORKING
+// View one animal
 router.get('/:animal/:id', withAuth, async (req, res) => {
+  // Send the rendered Handlebars.js template back as the response
   try {
       const dbanimalData = await Animals.findByPk(req.params.id, {
       });
@@ -39,7 +40,7 @@ router.get('/:animal/:id', withAuth, async (req, res) => {
 });
 
 
-// View all cats or dogs  WORKING
+// View all cats or dogs
 router.get('/:animal', withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try{
@@ -55,7 +56,6 @@ router.get('/:animal', withAuth, async (req, res) => {
     );
     res.render('allAnimals', {
       animals,
-      // loggedIn: req.session.loggedIn,
     });
   } catch(err){
     console.log(err);
